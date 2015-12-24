@@ -27,7 +27,7 @@ main {
   height: 0px;
 }
 
-#main-card {
+#main-card, #list-card {
   width: 100%;
   height: 0px;
   min-height: 0px;
@@ -43,6 +43,36 @@ main {
 #main-card.expand-more {
   height: 15em;
   padding: 0.5em;
+}
+#list-card {
+  font-size: 1.3em;
+}
+#list-card.expand {
+  margin-top: 12px;
+  height: auto;
+  padding: 0.5em;
+}
+.winner-list-item {
+  height: 0px;
+  width: 100%;
+  background: #cfcfcf;
+  margin-top: 0.6em;
+  padding: 0.25em;
+  overflow: hidden;
+  font-size: 1.5em;
+}
+.winner-list-item.odd {
+  background: #c0c0c0;
+}
+.winner-list-item.expand {
+  height: auto;
+}
+#congrats {
+  height: 0px;
+  overflow: hidden;
+}
+#congrats.expand {
+  height: auto;
 }
 
 #info-disp {
