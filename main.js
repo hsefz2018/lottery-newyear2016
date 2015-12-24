@@ -25,6 +25,9 @@
     setTimeout(function () {
       document.getElementById('btn-more').classList.remove('collapse');
       document.getElementById('btn-okay').classList.remove('collapse');
-    }, 1000);
+      var disp_card = document.getElementById('display-card');
+      disp_card.classList.remove('expand');
+      disp_card.classList.add('expand-more');
+    }, 4000);
   };
 }(window));
