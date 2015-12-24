@@ -1,0 +1,65 @@
+body {
+  font-family: 'Roboto','Helvetica','Arial',sans-serif;
+}
+
+#header-row {
+  padding-left: 36px;
+}
+
+main {
+  padding: 2em 0px;
+}
+
+.mdl-grid {
+  line-height: 0px;
+}
+
+.transitive {
+  transition: all 600ms ease;
+}
+
+#btn-go {
+  width: 100%;
+  height: 2em;
+  font-size: 2em;
+}
+#btn-go.collapse {
+  height: 0px;
+}
+
+#display-card {
+  width: 100%;
+  height: 0px;
+  min-height: 0px;
+  padding: 0px 0.5em;
+  background-color: #dfdfdf;
+  font-size: 2em;
+  line-height: normal;
+}
+#display-card.expand {
+  height: 12em;
+  padding: 0.5em;
+}
+
+#numbers-disp {
+  font-size: 2.2em;
+  font-weight: bold;
+  margin: 0px;
+}
+#numbers-disp > div {
+  line-height: normal;
+}
+
+#card-buttons {
+  line-height: 0px;
+}
+#btn-more, #btn-okay {
+  height: 2em;
+  font-size: 1em;
+  margin: 4px;
+  min-height: 0px;
+  width: 100%;
+}
+#btn-more.collapse, #btn-okay.collapse {
+  height: 0px;
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+
+    <title>Your Awesome Title</title>
+
+    <link rel='stylesheet' href='./material.css'>
+    <script src='./material.js'></script>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/icon?family=Roboto'>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/icon?family=Material+Icons'>
+    <link rel='stylesheet' href='./styles.css'>
+  </head>
+  <body>
+    <div class='mdl-layout mdl-js-layout mdl-layout--fixed-header'>
+      <header class='mdl-layout__header'>
+        <div id='header-row' class='mdl-layout__header-row'>
+          <span class='mdl-layout-title'>Your Awesome Title</span>
+        </div>
+      </header>
+      <main>
+        <div class='mdl-grid'>
+          <div class='mdl-cell mdl-cell--1-col mdl-cell--hide-tablet mdl-cell--hide-phone'></div>
+          <div class='mdl-cell mdl-cell--10-col mdl-cell--12-col-tablet mdl-cell--12-col-phone'>
+            <button id='btn-go' class='transitive mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect'>
+              Go
+            </button>
+            <br>
+            <div id='display-card' class='transitive mdl-card mdl-shadow--2dp'>
+              <span>asdasd</span>
+              <div id='numbers-disp' class='mdl-grid'>
+                <div id='year-disp' class='mdl-cell mdl-cell--3-col'>????</div>
+                <div id='klass-disp' class='mdl-cell mdl-cell--2-col'>??</div>
+                <div id='num-disp' class='mdl-cell mdl-cell--2-col'>??</div>
+                <div class='mdl-cell mdl-cell--3-col'></div>
+                <div class='mdl-cell mdl-cell--2-col' style='background: black'>
+                  <img id='photo-disp'>
+                </div>
+              </div>
+              <div id='card-buttons'>
+                <button id='btn-more' class='transitive collapse mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect'>More</button>
+                <button id='btn-okay' class='transitive collapse mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored'>Okay</button>
+              </div>
+            </div>
+          </div>
+          <div class='mdl-cell mdl-cell--1-col mdl-cell--hide-tablet mdl-cell--hide-phone'></div>
+        </div>
+      </main>
+    </div>
+    <script src='./main.js'></script>
+  </body>
+</html>
