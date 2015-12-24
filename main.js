@@ -45,51 +45,51 @@
 
   var roll = function () {
     var roll_progress = 0;
-    var sel_year = -1, sel_klass = -1;
+    var sel_year = -1, sel_klass = -1, last_idx = 0;
     var timer_id;
     timer_id = setInterval(function () {
       var len = students.length, idx = random_under(len);
       if (roll_progress === 0) {
         // Do nothing
+        while (students[idx].year === students[last_idx].year) idx = random_under(len);
       } else if (roll_progress === 1) {
         // Year selected
-        if (sel_year === -1) sel_year = students[idx].year;
-        else while (students[idx].year != sel_year) idx = random_under(len);
+        while (students[idx].year != sel_year || students[idx].klass === students[last_idx].klass)
+          idx = random_under(len);
       } else if (roll_progress === 2 || ++roll_progress % 4 === 0) {
         // Year & class selected
-        while (students[idx].year != sel_year) idx = random_under(len);
-        if (sel_klass === -1) sel_klass = students[idx].klass;
-        else while (students[idx].year != sel_year || students[idx].klass != sel_klass)
+        while (students[idx].year != sel_year || students[idx].klass != sel_klass)
           idx = random_under(len);
       } else return;
+      last_idx = idx;
       document.getElementById('year-disp').innerText = students[idx].year;
       document.getElementById('klass-disp').innerText = _02d(students[idx].klass);
       document.getElementById('num-disp').innerText = _02d(students[idx].num);
       document.getElementById('name-disp').innerText = students[idx].name;
     }, 50);
-    setTimeout(function () { roll_progress = 1; }, 2000);
-    setTimeout(function () { roll_progress = 2; }, 4000);
-    setTimeout(function () { roll_progress = 3; }, 6000);
-    setTimeout(function () { clearInterval(timer_id); }, 7200);
+    setTimeout(function () { roll_progress = 1; sel_year = students[last_idx].year; }, 1500);
+    setTimeout(function () { roll_progress = 2; sel_klass = students[last_idx].klass; }, 3000);
+    setTimeout(function () { roll_progress = 3; }, 4500);
+    setTimeout(function () { clearInterval(timer_id); }, 5500);
     setTimeout(function () {
       document.getElementById('btn-more').classList.remove('collapse');
       document.getElementById('btn-okay').classList.remove('collapse');
-      var disp_card = document.getElementById('display-card');
+      var disp_card = document.getElementById('main-card');
       disp_card.classList.remove('expand');
       disp_card.classList.add('expand-more');
-    }, 8200);
+    }, 6000);
   };
 
   document.getElementById('btn-go').onclick = function () {
     document.getElementById('btn-go').classList.add('collapse');
-    document.getElementById('display-card').classList.add('expand');
+    document.getElementById('main-card').classList.add('expand');
     roll();
   };
   document.getElementById('btn-more').onclick = function () {
     document.getElementById('btn-more').classList.add('collapse');
     document.getElementById('btn-okay').classList.add('collapse');
-    document.getElementById('display-card').classList.remove('expand-more');
-    document.getElementById('display-card').classList.add('expand');
+    document.getElementById('main-card').classList.remove('expand-more');
+    document.getElementById('main-card').classList.add('expand');
     roll();
   };
 }(window));

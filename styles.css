@@ -27,7 +27,7 @@ main {
   height: 0px;
 }
 
-#display-card {
+#main-card {
   width: 100%;
   height: 0px;
   min-height: 0px;
@@ -36,11 +36,11 @@ main {
   font-size: 2em;
   line-height: normal;
 }
-#display-card.expand {
+#main-card.expand {
   height: 12em;
   padding: 0.5em;
 }
-#display-card.expand-more {
+#main-card.expand-more {
   height: 15em;
   padding: 0.5em;
 }
