@@ -48,16 +48,15 @@ main {
 #info-disp {
   font-size: 2.2em;
   height: 3.5em;
-  font-weight: bold;
   margin: 0px;
 }
 #numbers-disp > div {
   height: 1em;
   line-height: normal;
 }
-
 #name-disp {
   font-size: 1.2em;
+  font-weight: bold;
 }
 
 #card-buttons {
