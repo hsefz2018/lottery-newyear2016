@@ -22,7 +22,7 @@ main {
   font-size: 1.8em;
 }
 .xlargetext {
-  font-size: 3.6em;
+  font-size: 3.2em;
   font-weight: bold;
 }
 
@@ -75,15 +75,16 @@ main {
   background: #c0c0c0;
 }
 .winner-list-item.expand {
-  height: auto;
+  height: 1em;
 }
 #congrats {
   height: 0px;
   overflow: hidden;
   color: #888;
+  font-size: 1.4em;
 }
 #congrats.expand {
-  height: auto;
+  height: 1em;
 }
 
 #info-disp {

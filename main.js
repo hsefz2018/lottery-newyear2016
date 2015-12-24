@@ -44,7 +44,6 @@
   };
 
   var roll = function () {
-    document.getElementById('main-card-caption').innerText = '……';
     var roll_progress = 0;
     var sel_year = -1, sel_klass = -1, last_idx = 0;
     var timer_id;
@@ -73,7 +72,6 @@
     setTimeout(function () { roll_progress = 3; }, 4500);
     setTimeout(function () { clearInterval(timer_id); }, 5500);
     setTimeout(function () {
-      document.getElementById('main-card-caption').innerText = 'Whoo';
       document.getElementById('btn-more').classList.remove('collapse');
       document.getElementById('btn-okay').classList.remove('collapse');
       var disp_card = document.getElementById('main-card');
@@ -87,7 +85,8 @@
       if (winner_list.children.length % 2 === 0) item.classList.add('odd');
       item.innerHTML = students[last_idx].year + _02d(students[last_idx].klass) + _02d(students[last_idx].num)
         + '&nbsp;&nbsp;&nbsp;' + students[last_idx].name;
-      winner_list.appendChild(item);
+      if (winner_list.children.length === 0) winner_list.appendChild(item);
+      else winner_list.insertBefore(item, winner_list.firstElementChild);
       setTimeout(function () { item.classList.add('expand'); }, 200);
     }, 6000);
   };
