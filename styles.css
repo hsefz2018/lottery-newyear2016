@@ -18,6 +18,14 @@ main {
   transition: all 600ms ease;
 }
 
+.largetext {
+  font-size: 1.8em;
+}
+.xlargetext {
+  font-size: 3.6em;
+  font-weight: bold;
+}
+
 #btn-go {
   width: 100%;
   height: 2em;
@@ -50,13 +58,15 @@ main {
 #list-card.expand {
   margin-top: 12px;
   height: auto;
-  padding: 0.5em;
+  padding: 1em;
+}
+#winner-list {
+  margin-top: 0.6em;
 }
 .winner-list-item {
   height: 0px;
-  width: 100%;
+  width: auto;
   background: #cfcfcf;
-  margin-top: 0.6em;
   padding: 0.25em;
   overflow: hidden;
   font-size: 1.5em;
@@ -70,6 +80,7 @@ main {
 #congrats {
   height: 0px;
   overflow: hidden;
+  color: #888;
 }
 #congrats.expand {
   height: auto;
