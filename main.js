@@ -67,6 +67,7 @@
       document.getElementById('klass-disp').innerText = _02d(students[idx].klass);
       document.getElementById('num-disp').innerText = _02d(students[idx].num);
       document.getElementById('name-disp').innerText = students[idx].name;
+      document.getElementById('photo-disp').style['background-image'] = 'url(photos/' + students[idx].photo + ')';
     }, 50);
     setTimeout(function () { roll_progress = 1; sel_year = students[last_idx].year; }, 1500);
     setTimeout(function () { roll_progress = 2; sel_klass = students[last_idx].klass; }, 3000);

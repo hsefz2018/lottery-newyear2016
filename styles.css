@@ -101,6 +101,11 @@ main {
   font-weight: bold;
 }
 
+#photo-disp {
+  background-size: cover;
+  background-position: center;
+}
+
 #card-buttons {
   line-height: 0px;
 }
