@@ -69,7 +69,7 @@ main {
 }
 #list-card.expand-more {
   margin-top: 12px;
-  max-height: 233em;  /* unset; */
+  max-height: 35em; /* unset; */
   padding: 1em;
 }
 #winner-list {
