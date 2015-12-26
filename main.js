@@ -45,6 +45,9 @@
   };
 
   var roll = function () {
+    document.getElementById('year-disp').classList.remove('highlight-text');
+    document.getElementById('klass-disp').classList.remove('highlight-text');
+    document.getElementById('num-disp').classList.remove('highlight-text');
     var roll_progress = 0;
     var sel_year = -1, sel_klass = -1, last_idx = 0;
     var timer_id;
@@ -69,10 +72,10 @@
       document.getElementById('name-disp').innerText = students[idx].name;
       document.getElementById('photo-disp').style['background-image'] = 'url(photos/' + students[idx].photo + ')';
     }, 50);
-    setTimeout(function () { roll_progress = 1; sel_year = students[last_idx].year; }, 1500);
-    setTimeout(function () { roll_progress = 2; sel_klass = students[last_idx].klass; }, 3000);
+    setTimeout(function () { roll_progress = 1; sel_year = students[last_idx].year; document.getElementById('year-disp').classList.add('highlight-text'); }, 1500);
+    setTimeout(function () { roll_progress = 2; sel_klass = students[last_idx].klass; document.getElementById('klass-disp').classList.add('highlight-text'); }, 3000);
     setTimeout(function () { roll_progress = 3; }, 4500);
-    setTimeout(function () { clearInterval(timer_id); }, 5500);
+    setTimeout(function () { clearInterval(timer_id); document.getElementById('num-disp').classList.add('highlight-text'); }, 5500);
     setTimeout(function () {
       document.getElementById('btn-more').classList.remove('collapse');
       document.getElementById('btn-okay').classList.remove('collapse');

@@ -25,6 +25,9 @@ main {
   font-size: 3.2em;
   font-weight: bold;
 }
+.highlight-text {
+  color: #b00;
+}
 
 #btn-go {
   width: 100%;
