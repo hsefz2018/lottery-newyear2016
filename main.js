@@ -1,11 +1,12 @@
 (function (window) {
   'use strict';
 
-  var Student = function (year, klass, num, name) {
+  var Student = function (year, klass, num, name, photo) {
     this.year = year;
     this.klass = klass;
     this.num = num;
     this.name = name;
+    this.photo = photo;
   };
   //Student.prototype.distribution = [];
   Student.prototype.show = function () {
@@ -13,24 +14,24 @@
   };
 
   var students = [
-    new Student(2017, 12, 14, 'bla'),
-    new Student(2017, 12, 16, 'bluh'),
-    new Student(2017, 12, 18, 'bleh'),
-    new Student(2017, 13, 233, 'hoho'),
-    new Student(2017, 13, 238, 'haha'),
-    new Student(2017, 13, 243, 'hihi'),
-    new Student(2017, 14, 6666, 'yo'),
-    new Student(2017, 14, 9999, 'yay'),
-    new Student(2017, 14, 66666, 'yup'),
-    new Student(2017, 14, 99999, 'yey'),
-    new Student(2018, 9, 9, 'lsq'),
-    new Student(2018, 9, 19, 'wdq'),
-    new Student(2018, 9, 99, 'hahahaha'),
-    new Student(2018, 9, 999, 'hohohoho'),
-    new Student(2018, 88, 1, 'sbd'),
-    new Student(2018, 88, 2, 'sth'),
-    new Student(2018, 88, 3, 'spl'),
-    new Student(2018, 88, 4, 'stm'),
+    new Student(2017, 12, 14, 'bla', '10.37.29.png'),
+    new Student(2017, 12, 16, 'bluh', '10.38.01.png'),
+    new Student(2017, 12, 18, 'bleh', '10.38.23.png'),
+    new Student(2017, 13, 233, 'hoho', '10.39.04.png'),
+    new Student(2017, 13, 238, 'haha', '10.39.11.png'),
+    new Student(2017, 13, 243, 'hihi', '10.39.38.png'),
+    new Student(2017, 14, 6666, 'yo', '10.39.47.png'),
+    new Student(2017, 14, 9999, 'yay', '10.39.51.png'),
+    new Student(2017, 14, 66666, 'yup', '10.39.55.png'),
+    new Student(2017, 14, 99999, 'yey', '10.40.04.png'),
+    new Student(2018, 9, 9, 'lsq', '10.40.52.png'),
+    new Student(2018, 9, 19, 'wdq', '10.44.27.png'),
+    new Student(2018, 9, 99, 'hahahaha', '10.45.03.png'),
+    new Student(2018, 9, 999, 'hohohoho', '10.47.21.png'),
+    new Student(2018, 88, 1, 'sbd', '10.47.52.png'),
+    new Student(2018, 88, 2, 'sth', '10.48.06.png'),
+    new Student(2018, 88, 3, 'spl', '10.48.50.png'),
+    new Student(2018, 88, 4, 'orzczr', '10.49.40.png'),
   ];
   for (var i in students) {
     students[i].show();
