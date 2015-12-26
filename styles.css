@@ -29,16 +29,18 @@ main {
   color: #b00;
 }
 
-#btn-go {
+#btn-go, #btn-prize {
   width: 100%;
   height: 2em;
   font-size: 2em;
+  margin: 12px 0px;
 }
-#btn-go.collapse {
+#btn-go.collapse, #btn-prize.collapse {
   height: 0px;
+  margin: 0px;
 }
 
-#main-card, #list-card {
+#main-card, #list-card, #prize-card {
   width: 100%;
   height: 0px;
   min-height: 0px;
@@ -57,10 +59,17 @@ main {
 }
 #list-card {
   font-size: 1.3em;
+  height: auto;
+  max-height: 0px;  /* Ref. http://www.tuicool.com/articles/AFb2ayq */
 }
 #list-card.expand {
   margin-top: 12px;
-  height: auto;
+  max-height: 8em;
+  padding: 1em;
+}
+#list-card.expand-more {
+  margin-top: 12px;
+  max-height: 20em; /* unset; */
   padding: 1em;
 }
 #winner-list {
@@ -80,14 +89,19 @@ main {
 .winner-list-item.expand {
   height: 1em;
 }
-#congrats {
-  height: 0px;
+.subtitle {
   overflow: hidden;
   color: #888;
   font-size: 1.4em;
 }
+#congrats {
+  height: 0px;
+}
 #congrats.expand {
-  height: 1em;
+  height: 1.2em;
+}
+#prize-desc {
+  margin-bottom: 0.2em;
 }
 
 #info-disp {
@@ -121,4 +135,13 @@ main {
 }
 #btn-more.collapse, #btn-okay.collapse {
   height: 0px;
+}
+
+#prize-card {
+  height: auto;
+  max-height: 0px;
+}
+#prize-card.expand {
+  max-height: 2000px;
+  padding: 1em;
 }

@@ -110,8 +110,16 @@
   };
   document.getElementById('btn-okay').onclick = function () {
     document.getElementById('main-card').classList.remove('expand-more');
+    document.getElementById('list-card').classList.remove('expand');
+    document.getElementById('list-card').classList.add('expand-more');
     document.getElementById('winner-list').classList.add('largetext');
     document.getElementById('winners-caption').classList.add('xlargetext');
     document.getElementById('congrats').classList.add('expand');
+    document.getElementById('btn-prize').classList.remove('collapse');
+  };
+  document.getElementById('btn-prize').onclick = function () {
+    document.getElementById('list-card').classList.remove('expand-more');
+    document.getElementById('btn-prize').classList.add('collapse');
+    document.getElementById('prize-card').classList.add('expand');
   };
 }(window));
