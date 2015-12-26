@@ -20,10 +20,10 @@
     new Student(2017, 13, 233, 'hoho', '10.39.04.png'),
     new Student(2017, 13, 238, 'haha', '10.39.11.png'),
     new Student(2017, 13, 243, 'hihi', '10.39.38.png'),
-    new Student(2017, 14, 6666, 'yo', '10.39.47.png'),
-    new Student(2017, 14, 9999, 'yay', '10.39.51.png'),
-    new Student(2017, 14, 66666, 'yup', '10.39.55.png'),
-    new Student(2017, 14, 99999, 'yey', '10.40.04.png'),
+    new Student(2019, 14, 6666, 'yo', '10.39.47.png'),
+    new Student(2019, 14, 9999, 'yay', '10.39.51.png'),
+    new Student(2019, 15, 66666, 'yup', '10.39.55.png'),
+    new Student(2019, 15, 99999, 'yey', '10.40.04.png'),
     new Student(2018, 9, 9, 'lsq', '10.40.52.png'),
     new Student(2018, 9, 19, 'wdq', '10.44.27.png'),
     new Student(2018, 9, 99, 'hahahaha', '10.45.03.png'),
@@ -62,7 +62,7 @@
           idx = random_under(len);
       } else if (roll_progress === 2 || ++roll_progress % 3 === 0) {
         // Year & class selected
-        while (students[idx].year != sel_year || students[idx].klass != sel_klass)
+        while (idx === last_idx || students[idx].year != sel_year || students[idx].klass != sel_klass)
           idx = random_under(len);
       } else return;
       last_idx = idx;
@@ -71,11 +71,11 @@
       document.getElementById('num-disp').innerText = _02d(students[idx].num);
       document.getElementById('name-disp').innerText = students[idx].name;
       document.getElementById('photo-disp').style['background-image'] = 'url(photos/' + students[idx].photo + ')';
-    }, 50);
+    }, 40);
     setTimeout(function () { roll_progress = 1; sel_year = students[last_idx].year; document.getElementById('year-disp').classList.add('highlight-text'); }, 1500);
-    setTimeout(function () { roll_progress = 2; sel_klass = students[last_idx].klass; document.getElementById('klass-disp').classList.add('highlight-text'); }, 3000);
-    setTimeout(function () { roll_progress = 3; }, 4500);
-    setTimeout(function () { clearInterval(timer_id); document.getElementById('num-disp').classList.add('highlight-text'); }, 5500);
+    setTimeout(function () { roll_progress = 2; sel_klass = students[last_idx].klass; document.getElementById('klass-disp').classList.add('highlight-text'); }, 3250);
+    setTimeout(function () { roll_progress = 3; }, 5000);
+    setTimeout(function () { clearInterval(timer_id); document.getElementById('num-disp').classList.add('highlight-text'); }, 6500);
     setTimeout(function () {
       document.getElementById('btn-more').classList.remove('collapse');
       document.getElementById('btn-okay').classList.remove('collapse');
@@ -93,7 +93,7 @@
       if (winner_list.children.length === 0) winner_list.appendChild(item);
       else winner_list.insertBefore(item, winner_list.firstElementChild);
       setTimeout(function () { item.classList.add('expand'); }, 200);
-    }, 6000);
+    }, 7000);
   };
 
   document.getElementById('btn-go').onclick = function () {
