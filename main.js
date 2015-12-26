@@ -83,6 +83,10 @@
       disp_card.classList.remove('expand');
       disp_card.classList.add('expand-more');
       document.getElementById('list-card').classList.add('expand');
+      setTimeout(function () {
+        document.getElementById('list-card').classList.remove('expand');
+        document.getElementById('list-card').classList.add('expand-more');
+      }, 700);  // > 600ms
       var winner_list = document.getElementById('winner-list');
       var item = document.createElement('div');
       item.classList.add('transitive');
@@ -110,8 +114,6 @@
   };
   document.getElementById('btn-okay').onclick = function () {
     document.getElementById('main-card').classList.remove('expand-more');
-    document.getElementById('list-card').classList.remove('expand');
-    document.getElementById('list-card').classList.add('expand-more');
     document.getElementById('winner-list').classList.add('largetext');
     document.getElementById('winners-caption').classList.add('xlargetext');
     document.getElementById('congrats').classList.add('expand');
